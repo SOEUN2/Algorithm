@@ -9,9 +9,12 @@ class Solution {
             
         for(int i=2;i<=end;i++){
             if(prime[i]){
-                continue;
+                   continue;
             }
             for(int j=2*i;j<=n;j+=i){
+               if(prime[j]){
+                   continue;
+               }
                prime[j] = true; 
             }
         }
